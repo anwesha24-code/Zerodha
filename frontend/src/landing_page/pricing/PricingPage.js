@@ -5,7 +5,6 @@ import Brokerage from './Brokerage';
 function PricingPanel() {
     return ( 
         <>
-        <h1>PricingPanel</h1>
         <Hero/>
         <Brokerage/>
         </>

@@ -6,7 +6,6 @@ import Team from './Team';
 function AboutPage() {
     return (
         <>
-            <h1>AboutPage</h1>
             <Hero />
             <Team/>
         </>

@@ -8,19 +8,16 @@ import Education from './Education';
 import Pricing from './Pricing';
 
 import OpenAccount from '../OpenAccount';
-import Footer from '../Footer';
-import Navbar from '../Navbar';
+
 function HomePage() {
     return ( 
         <>
-        <Navbar />
         <Hero />
         <Awards/>
         <Stats/>
         <Pricing/>
         <Education/>
         <OpenAccount/>
-        <Footer/>
         </>
         
      );
