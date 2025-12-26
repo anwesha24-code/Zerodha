@@ -1,0 +1,1 @@
+a tag and href doesnt work inside BrowserRoute where navbar has been placed therefore inside navbar.ja we import Link and change it to Link and to instead of a and href
