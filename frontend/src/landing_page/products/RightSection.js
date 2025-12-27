@@ -1,4 +1,5 @@
 import React from 'react';
+// destructure props
 function RightSection({ imageURL, productName, productDescription }) {
     return (
         <div className='container'>
