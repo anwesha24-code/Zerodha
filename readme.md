@@ -4,3 +4,6 @@ img-fluid rounded-circle is used to make an image round
 
 install react-router-dom for routing
 we use BrowserRoutes, Routes and Route
+
+backend
+dashboard contains a static part that is the watchlist and a dynamic part made using nested routing 
