@@ -7,3 +7,5 @@ we use BrowserRoutes, Routes and Route
 
 backend
 dashboard contains a static part that is the watchlist and a dynamic part made using nested routing 
+
+material ui used for react specific website 
