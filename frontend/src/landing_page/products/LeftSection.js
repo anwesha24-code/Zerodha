@@ -1,4 +1,5 @@
 import React from 'react';
+// destructure props
 function LeftSection({ imageURL, productName, productDescription, tryDemo, learnMore, googlePlay, appstore }) {
     return (
         <div className='container'>
@@ -6,7 +7,6 @@ function LeftSection({ imageURL, productName, productDescription, tryDemo, learn
                 <div className='col-6 '>
                     <img src={imageURL} alt={productName} className='' />
                 </div>
-                {/* <div className='col-1'></div> */}
                 <div className='col-6 p-5 mt-5'>
                     <h1>{productName}</h1>
                     <p>{productDescription}</p>

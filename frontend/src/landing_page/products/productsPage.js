@@ -8,7 +8,9 @@ function ProductsPage() {
     return (
         <div>
             <Hero />
-
+{/* repeating sections are present therefore we make use of LeftSection and RightSection components multiple times with different props
+inorder to make individual sections for different products we use props
+pass on data as props destructure in components */}
             <LeftSection
                 imageURL="media/images/kite.png"
                 productName="Kite"
@@ -39,8 +41,10 @@ function ProductsPage() {
                 googlePlay="https://play.google.com/store/apps/details?id=com.zerodha.kite3"
                 appstore="https://apps.apple.com/in/app/kite-zerodha/id1449453802"
             />
+
             <p className="text-center mb-5 mt-5">Want to know more about our technology stack? Check out the Zerodha.tech</p>
             <p className='mb-5'>g</p>
+
             <Universe/>
 
 
