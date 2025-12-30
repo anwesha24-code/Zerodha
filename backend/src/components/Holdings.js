@@ -21,8 +21,11 @@ const Holdings = () => {
 
           {/* dynammic portion from holdings data */}
           {holdings.map((stock, index) => {
+            //calculations related to Profit and Loss
             const curValue = stock.price * stock.qty;
             const isProfit = curValue - (stock.avgCost * stock.qty) >= 0;
+
+            //to store for designing purpose
             const profClass = isProfit ? "profit" : "loss";
             const dayClass = stock.isLoss ? "loss" : "profit";
 
