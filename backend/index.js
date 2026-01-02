@@ -104,71 +104,71 @@ mongoose.connect(url).then(() => {
 
 //-----------------run only once to initialise data--------------
 
-// to add dummy data initialisation
-// const { PositionsModel } = require("./model/PositionsModel.js")
-// open the url localhost:3002/addPositions Done will appear if data gets initialised and 
-// then check in mongoose website acc data will be visible and 
+// // to add dummy data initialisation
+// // const { PositionsModel } = require("./model/PositionsModel.js")
+// // open the url localhost:3002/addPositions Done will appear if data gets initialised and 
+// // then check in mongoose website acc data will be visible and 
 
-app.get('/addPositions', async (req, res) => {
-    let tempPositions = [
-        {
-            product: "CNC",
-            name: "EVEREADY",
-            qty: 2,
-            avg: 316.27,
-            price: 320.00,
-            net: "+1.18%",
-            day: "0.50%",
-            isLoss: true,
-        },
-        {
-            product: "CNC",
-            name: "HDFCBANK",
-            qty: 5,
-            avg: 1450.00,
-            price: 1500.30,
-            net: "+3.45%",
-            day: "1.20%",
-            isLoss: false,
-        },
-        {
-            product: "CNC",
-            name: "INFY",
-            qty: 10,
-            avg: 1500.00,
-            price: 1555.45,
-            net: "+3.70%",
-            day: "-1.60%",
-            isLoss: false,
-        },
-        {
-            product: "CNC",
-            name: "TCS",
-            qty: 3,
-            avg: 3150.00,
-            price: 3200.50,
-            net: "+1.59%",
-            day: "0.85%",
-            isLoss: false,
-        }
-    ];
+// app.get('/addPositions', async (req, res) => {
+//     let tempPositions = [
+//         {
+//             product: "CNC",
+//             name: "EVEREADY",
+//             qty: 2,
+//             avg: 316.27,
+//             price: 320.00,
+//             net: "+1.18%",
+//             day: "0.50%",
+//             isLoss: true,
+//         },
+//         {
+//             product: "CNC",
+//             name: "HDFCBANK",
+//             qty: 5,
+//             avg: 1450.00,
+//             price: 1500.30,
+//             net: "+3.45%",
+//             day: "1.20%",
+//             isLoss: false,
+//         },
+//         {
+//             product: "CNC",
+//             name: "INFY",
+//             qty: 10,
+//             avg: 1500.00,
+//             price: 1555.45,
+//             net: "+3.70%",
+//             day: "-1.60%",
+//             isLoss: false,
+//         },
+//         {
+//             product: "CNC",
+//             name: "TCS",
+//             qty: 3,
+//             avg: 3150.00,
+//             price: 3200.50,
+//             net: "+1.59%",
+//             day: "0.85%",
+//             isLoss: false,
+//         }
+//     ];
 
-    tempPositions.forEach((item) => {
-        let newPosition = new PositionsModel({
-            product: item.product,
-            name: item.name,
-            qty: item.qty,
-            avg: item.avg,
-            price: item.price,
-            net: item.net,
-            day: item.day,
-            isLoss: item.isLoss,
-        });
-        newPosition.save();
-    });
-    res.send("Done");//so that after running we get confirmation in console 
-    // that data has been initialised since this will be done only once
-})
+//     tempPositions.forEach((item) => {
+//         let newPosition = new PositionsModel({
+//             product: item.product,
+//             name: item.name,
+//             qty: item.qty,
+//             avg: item.avg,
+//             price: item.price,
+//             net: item.net,
+//             day: item.day,
+//             isLoss: item.isLoss,
+//         });
+//         newPosition.save();
+//     });
+//     res.send("Done");//so that after running we get confirmation in console 
+//     // that data has been initialised since this will be done only once
+// })
 // //this entire thing done above was to initialise data for Positions
 app.listen(PORT, () => {
     console.log("app started");
