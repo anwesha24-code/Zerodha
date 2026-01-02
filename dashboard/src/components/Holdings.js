@@ -1,10 +1,20 @@
-import React from "react";
-import { holdings } from "../data/data";
+import React,{useState,useEffect} from "react";
+// import { holdings } from "../data/data";
+
+import axios from "axios";
 
 const Holdings = () => {
+  //fetching data from mongo to be displayed in dashboard (connecting db and frontend)
+  const [allHoldings,setAllHoldings]=useState([]);
+  useEffect(()=>{
+    axios.get("http://localhost:3002/allHoldings").then((res)=>{
+      console.log(res.data);//just to see if data is coming correctly
+      setAllHoldings(res.data);
+    });
+  },[]);
   return (
     <>
-      <h3 className="title">Holdings ({holdings.length})</h3>
+      <h3 className="title">Holdings ({allHoldings.length})</h3>
 
       <div className="order-table">
         <table>
@@ -19,8 +29,8 @@ const Holdings = () => {
             <th>Day chg.</th>
           </tr>
 
-          {/* dynammic portion from holdings data */}
-          {holdings.map((stock, index) => {
+          {/* dynammic portion from allHoldings data */}
+          {allHoldings.map((stock, index) => {
             //calculations related to Profit and Loss
             const curValue = stock.price * stock.qty;
             const isProfit = curValue - (stock.avgCost * stock.qty) >= 0;
