@@ -11,3 +11,5 @@ dashboard contains a static part that is the watchlist and a dynamic part made u
 material ui used for react specific website 
 
 positions, holdings, orders schemas present
+
+JWT bcrpt for user authorisation and authentication
