@@ -14,4 +14,5 @@ positions, holdings, orders schemas present
 
 JWT bcrpt for user authorisation and authentication
 
-react-chartjs for charts
+react-chartjs for chart
+
