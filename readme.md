@@ -12,7 +12,8 @@ material ui used for react specific website
 
 positions, holdings, orders schemas present
 
-JWT bcrpt for user authorisation and authentication
+JWT bcrpt for user authorisation and authentication (not done yet)
 
 react-chartjs for chart
+
 
