@@ -4,6 +4,8 @@ import { Tooltip, Grow } from "@mui/material";
 import { watchlist } from "../data/data";
 
 import { BarChart, KeyboardArrowDown, KeyboardArrowUp, MoreHoriz } from "@mui/icons-material";//for icons
+import { useContext } from "react";
+import GeneralContext from "./GeneralContext";
 
 const WatchList = () => {
   return (
@@ -76,12 +78,13 @@ const WatchListItem = ({ stock }) => {
 
 const WatchlistActions = ({uid}) => {//stock name is used as uid, {} is for destructuring
   //for each stock we have buy sell analytics more buttons
+  const { openBuyWindow } = useContext(GeneralContext);
   return (
     <span className="actions">
       <span>
         {/*we use (B) as a shortcut for buy and (S) for sell*. Grow gives transition*/}
         <Tooltip title="Buy (B)"  placement="top" arrow slots={{ transition: Grow }}  >
-          <button className="buy">Buy</button>
+          <button className="buy" onClick={() => openBuyWindow(uid)}>Buy</button>
         </Tooltip>
         <Tooltip title="Sell (S)"  placement="top" arrow slots={{ transition: Grow }}  >
           <button className="sell">Sell</button>
