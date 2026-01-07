@@ -18,7 +18,8 @@ react-chartjs for chart
 vertical bar graph for holdings
 doughnut graph for watchlist
 
-testcases written in test folder using react-jest
+testcases written in test folder using react-jest.
+
 
 
 
