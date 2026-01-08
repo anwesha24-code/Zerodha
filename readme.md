@@ -1,3 +1,6 @@
+Stock Trading platform 
+
+important things i learnt while doing this project and important characteristics of the project
 a tag and href doesnt work inside BrowserRoute where navbar has been placed therefore inside navbar.ja we import Link and change it to Link and to instead of a and href
 
 img-fluid rounded-circle is used to make an image round
@@ -19,6 +22,7 @@ vertical bar graph for holdings
 doughnut graph for watchlist
 
 testcases written in test folder using react-jest.
+
 
 
 
